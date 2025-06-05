@@ -12,9 +12,9 @@ function Navbar() {
     <div>
       <nav className=" hidden h-[5rem] flex-row items-center justify-between mx-8 py-8 sm:hidden md:flex">
         <div>
-          <h1 className=" text-2xl text-black font-semibold">SajiloRent</h1>
+          <h1 className=" text-2xl text-black font-semibold">RentPasal</h1>
         </div>
-       
+
         <div className=" flex flex-row gap-8 items-center justify-between">
           <button className=" bg-main-bg rounded-md  h-[2.5rem] px-3 text-white">
             Login/Signup
@@ -28,7 +28,7 @@ function Navbar() {
 
       <nav className=" flex flex-row items-center justify-between mx-6 py-6 sm:flex md:hidden">
         <div>
-          <h1 className=" text-3xl text-black font-semibold">SajiloRent</h1>
+          <h1 className=" text-3xl text-black font-semibold">RentPasal</h1>
         </div>
         <div className=" flex flex-row gap-8 items-center justify-between">
           <button className=" bg-main-bg rounded-md  h-[2.5rem] px-3 text-white">
