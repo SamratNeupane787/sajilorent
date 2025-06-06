@@ -9,9 +9,9 @@ export default function Home() {
     <div>
       <Herosection />
       <Categories />
-      <ItemCard/>
-      <Faq/>
-      <Howto/>
+      <ItemCard />
+      <Howto />
+      <Faq />
     </div>
   );
 }
