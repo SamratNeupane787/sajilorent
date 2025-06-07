@@ -3,7 +3,7 @@ import { Input } from './input'
 import { Label } from '@radix-ui/react-label'
 import { Eye, EyeOff, Mail,Lock } from 'lucide-react'
 import { Button } from './button'
-function LoginForm({userType}) {
+function LoginForm({userType, signIn}) {
   const [email, setEmail]= useState("")
   const [password, setPassowrd] = useState("")
   const [showPassword, setShowPassowrd] = useState(false)

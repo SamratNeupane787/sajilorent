@@ -19,7 +19,7 @@ function Navbar() {
 
         <div className=" flex flex-row gap-8 items-center justify-between">
           <button className=" bg-main-bg rounded-md  h-[2.5rem] px-3 text-white">
-            Login/Signup
+            <Link href="/auth/sign-in"> Login/Signup</Link>
           </button>
           <button className=" flex flex-row items-center gap-3 text-center rounded-md  h-[2.5rem] px-3 text--[#4141b0]">
             <ShoppingCart color="#4141b0" />
@@ -36,7 +36,7 @@ function Navbar() {
         </div>
         <div className=" flex flex-row gap-8 items-center justify-between">
           <button className=" bg-main-bg rounded-md  h-[2.5rem] px-3 text-white">
-            Login/Signup
+            <Link href="/auth/sign-in"> Login/Signup</Link>
           </button>
           <button className=" flex flex-row items-center gap-3 text-center rounded-md  h-[2.5rem] px-3 text--[#4141b0]">
             <ShoppingCart color="#4141b0" />

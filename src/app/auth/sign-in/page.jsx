@@ -16,6 +16,7 @@ import Link from "next/link";
 import LoginForm from "@/components/ui/LoginForm";
 
 function Page() {
+  const [signUp, setSignup] = useState(false);
   return (
     <div className="h-screen flex flex-col items-center justify-center px-4 py-8 bg-white gap-6 sm:h-screen md:h-auto">
       <div className="text-center">
@@ -73,9 +74,8 @@ function Page() {
                   Manage your store and track your sales
                 </p>
               </div>
-              
+
               <LoginForm userType="seller" />
-            
             </TabsContent>
           </Tabs>
         </CardContent>
@@ -87,7 +87,7 @@ function Page() {
               Don't have an account?{" "}
             </span>
             <Link
-              href="/signup"
+              href="/auth/sign-up"
               className="text-primary hover:underline font-medium"
             >
               Sign up here
