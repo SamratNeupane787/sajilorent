@@ -1,5 +1,5 @@
 "use client"
-import { HamburgerIcon, Link, Search, ShoppingCart } from 'lucide-react'
+import { HamburgerIcon, Search, ShoppingCart } from 'lucide-react'
 import React, { useState } from 'react'
 import { AlignLeft ,X} from "lucide-react";
 import Link from 'next/link';
@@ -10,7 +10,7 @@ function Navbar() {
   }
   return (
     <div>
-      <nav className=" hidden h-[5rem] flex-row items-center justify-between mx-8 py-8 sm:hidden md:flex">
+      <nav className=" hidden h-[5rem] flex-row items-center justify-between mx-8 p-8 sm:hidden md:flex">
         <div>
           <Link href="/">
             <h1 className=" text-3xl text-black font-semibold">RentPasal</h1>
