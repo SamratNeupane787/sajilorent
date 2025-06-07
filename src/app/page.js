@@ -1,9 +1,12 @@
+"use client"
 import Image from "next/image";
 import Herosection from "../components/Herosection";
 import Categories from "@/components/Categories";
 import ItemCard from "@/components/ItemCard";
 import Faq from "@/components/Faq";
 import Howto from "@/components/Howto";
+import { auth } from "@/auth";
+import { useEffect } from "react";
 
 
 export default function Home() {
