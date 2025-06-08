@@ -14,11 +14,13 @@ import { useState } from "react";
 import { ShoppingBag, Store } from "lucide-react";
 import Link from "next/link";
 import SignupForm from "@/components/ui/SignupForm";
-import { login } from "@/lib/actions/auth";
+import { login } from "@/lib/actions/actions";
 import Google from "next-auth/providers/google";
+import { signIn } from "@/auth";
 
 function Page() {
   const [signUp, setSignup] = useState(false);
+  const [role, setRole] = useState("buyer")
   return (
     <div className="h-screen flex flex-col items-center justify-center px-4 py-8 bg-white gap-6 sm:h-screen md:min-h-full">
       <div className="text-center">
@@ -42,6 +44,7 @@ function Page() {
               <TabsTrigger
                 value="buyer"
                 className="flex items-center gap-2 justify-center "
+                onClick={() => setRole("buyer")}
               >
                 <ShoppingBag className="h-4 w-4" />
                 Buyer
@@ -49,6 +52,7 @@ function Page() {
               <TabsTrigger
                 value="seller"
                 className="flex items-center gap-2 justify-center "
+                onClick={() => setRole("seller")}
               >
                 <Store className="h-4 w-4" />
                 Seller
@@ -63,6 +67,7 @@ function Page() {
               <Button
                 variant="outline"
                 className="w-full bg-main-bg text-white"
+                onClick={() => signIn(role)}
               >
                 <svg
                   className="w-4 h-4 mr-2"
@@ -87,6 +92,7 @@ function Page() {
               <Button
                 variant="outline"
                 className="w-full bg-main-bg text-white"
+                onClick={() => login(role)}
               >
                 <svg
                   className="w-4 h-4 mr-2"

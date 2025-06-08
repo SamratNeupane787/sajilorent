@@ -14,9 +14,11 @@ import { useState } from "react";
 import { ShoppingBag, Store } from "lucide-react";
 import Link from "next/link";
 import LoginForm from "@/components/ui/LoginForm";
+import { signIn } from "@/auth";
 
 function Page() {
   const [signUp, setSignup] = useState(false);
+  const [role,setRole] = useState('buyer')
   return (
     <div className="h-screen flex flex-col items-center justify-center px-4 py-8 bg-white gap-6 sm:h-screen md:min-h-full">
       <div className="text-center">
@@ -67,6 +69,11 @@ function Page() {
               <Button
                 variant="outline"
                 className="w-full bg-main-bg text-white"
+                onClick={() =>
+                  signIn("google", {
+                    callbackUrl: `/auth/callback?role=${role}`,
+                  })
+                }
               >
                 <svg
                   className="w-4 h-4 mr-2"
@@ -93,6 +100,11 @@ function Page() {
               <Button
                 variant="outline"
                 className="w-full bg-main-bg text-white"
+                onClick={() =>
+                  signIn("google", {
+                    callbackUrl: `/auth/callback?role=${role}`,
+                  })
+                }
               >
                 <svg
                   className="w-4 h-4 mr-2"
@@ -118,7 +130,7 @@ function Page() {
               Don't have an account?{" "}
             </span>
             <Link
-              href="/auth/sign-up"
+              href="/sign-up"
               className="text-primary hover:underline font-medium"
             >
               Sign up here
