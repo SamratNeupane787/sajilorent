@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import { Button } from './ui/button'
-import { logout } from '@/lib/actions/auth'
+import { logout } from '@/lib/actions/actions'
 function SignOutBtn() {
 
   return (
