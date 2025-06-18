@@ -3,7 +3,7 @@ import React from 'react'
 import { Button } from './ui/button'
 import { login } from '@/lib/actions/actions'
 function SigninBtn({role}) {
-
+  // localStorage.setItem("role", role)
   return (
     <Button
       variant="outline"

@@ -20,11 +20,14 @@ export default function HandleRole() {
     // Get role from session user (assuming you added role to session)
     const role = session.user.role || "buyer";
 
+    
+
+
     // Redirect based on role
     if (role === "seller") {
-      router.replace("/");
+      router.replace("/seller");
     } else {
-      router.replace("/");
+      router.replace("/buyer");
     }
   }, [session, status, router]);
 

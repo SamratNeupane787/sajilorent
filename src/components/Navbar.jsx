@@ -9,7 +9,7 @@ import SignOutBtn from './SignOutBtn';
 function Navbar() {
   const [navi, setNavi] = useState(false)
   const [logout, setLogout] = useState(false)
-
+  
   const handleNavi = ()=>{
     setNavi(!navi)
   }
@@ -37,7 +37,9 @@ function Navbar() {
                 onClick={() => setLogout((prev) => !prev)}
               />
               {logout && (
-                <div className="absolute top-full mt-2 min-w-full rounded-md  shadow-lg z-10 overflow-auto">
+                
+                <div className="bg-slate-300  p-3  flex flex-col items-center  gap-3 absolute top-full mt-2 min-w-full rounded-md  shadow-lg z-10 overflow-auto">
+                  <div>Dashboard</div>
                   <SignOutBtn />
                 </div>
               )}

@@ -11,7 +11,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     
       let role = "buyer";
       const cookieStore = cookies();
-      const tempRole =await cookieStore.get("temp_role")?.value
+      const tempRole = cookieStore.get("temp_role")?.value
       console.log(tempRole)
 
       if(tempRole === 'seller'){
@@ -28,7 +28,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         console.log(account?.state)
   
         await connectMongoDB();
-        const existingUser = await User.findOne({ email: user.email });
+        const existingUser = await User.findOne({ email: user.email});
         if (!existingUser) {
           await User.create({
             email: user.email,
@@ -43,6 +43,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         return false;
       }
     },
+
 
     async jwt({ token, user }) {
       if (user) {

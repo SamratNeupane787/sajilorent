@@ -20,7 +20,9 @@ function Page() {
   return (
     <div className="h-screen flex flex-col items-center justify-center px-4 py-8 bg-white gap-6 sm:h-screen md:min-h-full">
       <div className="text-center">
-        <h2 className="text-2xl md:text-3xl font-bold text-main-bg">Get Started</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-main-bg">
+          Get Started
+        </h2>
         <p className="mt-2 text-sm text-gray-600">Start your Passive Income</p>
       </div>
 
@@ -67,7 +69,6 @@ function Page() {
           </Tabs>
 
           <div className="mt-4">
-            {/* ✅ Only one SigninBtn, always using selected role */}
             <SigninBtn role={role} />
           </div>
         </CardContent>
